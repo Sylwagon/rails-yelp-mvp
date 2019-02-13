@@ -2,14 +2,12 @@
 
 one:
   name: MyString
-  address: MyText
-  phone: MyString
-  category_id: 1
-  reviews_id: 1
+  address: MyString
+  text: MyString
+  category: MyString
 
 two:
   name: MyString
-  address: MyText
-  phone: MyString
-  category_id: 1
-  reviews_id: 1
+  address: MyString
+  text: MyString
+  category: MyString
