@@ -11,14 +11,15 @@
 <h2>reviews</h2>
 
 <ul style="list-style: none;">
-<% @reviews.each do |review| %>
+<% @restaurant.reviews.each do |review| %>
   <li>
     <%= review.content %> - <%= review.rating %>
   </li>
 <% end %>
 </ul>
 <br>
-<%= link_to "create a new review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+<%= render '/reviews/form', review: @review, restaurant: @restaurant %>
+
 <br>
 <br>
 <%= link_to "back to main", restaurants_path  %>
