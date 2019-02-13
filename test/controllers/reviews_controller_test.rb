@@ -1,13 +1,18 @@
 require 'test_helper'
 
 class ReviewsControllerTest < ActionDispatch::IntegrationTest
-  test "should get content" do
-    get reviews_content_url
+  test "should get index" do
+    get reviews_index_url
     assert_response :success
   end
 
-  test "should get rating" do
-    get reviews_rating_url
+  test "should get new" do
+    get reviews_new_url
+    assert_response :success
+  end
+
+  test "should get create" do
+    get reviews_create_url
     assert_response :success
   end
 

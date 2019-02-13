@@ -2,11 +2,23 @@
 <h1>Restaurant Detail</h1>
 
 <h2><%= @restaurant.name %></h2>
-<ul>
+<ul style="list-style: none;">
   <li><%= @restaurant.address %></li>
   <li><%= @restaurant.phone_number %></li>
   <li><%= @restaurant.category %></li>
 </ul>
+<br>
+<h2>reviews</h2>
+
+<ul style="list-style: none;">
+<% @reviews.each do |review| %>
+  <li>
+    <%= review.content %> - <%= review.rating %>
+  </li>
+<% end %>
+</ul>
+<br>
+<%= link_to "create a new review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
 <br>
 <br>
 <%= link_to "back to main", restaurants_path  %>
